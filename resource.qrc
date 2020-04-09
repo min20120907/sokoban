@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/main_character(back).png</file>
+        <file>res/brick.jpg</file>
+        <file>res/main_character(left).png</file>
+        <file>res/main_character(right).png</file>
+        <file>res/stone_ground.jpg</file>
+        <file>res/target_ground.jpg</file>
+        <file>res/wooden_box.png</file>
+        <file>res/main_character(front).png</file>
+    </qresource>
+</RCC>
