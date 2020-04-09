@@ -7,8 +7,10 @@
 #include <QPixmap>
 #include <QObject>
 
+
 namespace Ui {
-class MainWindow;
+    class MainWindow;
+    class player;
 }
 
 class MainWindow : public QMainWindow
@@ -16,11 +18,23 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 public:
     explicit MainWindow(QWidget *parent = nullptr);
+    void character_turn_back();
+    void character_turn_front();
+    void character_turn_left();
+    void character_turn_right();
     ~MainWindow();
+
 private:
     Ui::MainWindow *ui;
     QLabel *Wall;
     QPixmap *wall;
+    QLabel *mainplayer;
+    QLabel *player_facing;
+    QPixmap *front;
+    QPixmap *back;
+    QPixmap *left;
+    QPixmap *right;
+    void keyPressEvent( QKeyEvent *event );
 };
 
 #endif // MAINWINDOW_H
