@@ -12,7 +12,7 @@ public:
     struct array {short int map[10][10];};
     array arr;
     static array const arrdata;
-    void map_gen(const array arrdata);
+    void map_gen();
     QPixmap** ground;
     QPixmap** wall;
     QPixmap** target;

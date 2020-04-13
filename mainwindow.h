@@ -9,6 +9,7 @@
 #include <QPainter>
 #include <QRectF>
 #include <QPainter>
+#include "level_1.h"
 namespace Ui {
     class MainWindow;
     class player;
@@ -18,6 +19,7 @@ class MainWindow : public QMainWindow
 {
     Q_OBJECT
 public:
+
     explicit MainWindow(QWidget *parent = nullptr);
     void character_turn_back();
     void character_turn_front();

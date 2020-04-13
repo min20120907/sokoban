@@ -57,6 +57,7 @@ void MainWindow::keyPressEvent(QKeyEvent* key){
         player_facing->move(player_facing->x()+50,player_facing->y());
     }
 }
+
 void MainWindow::character_turn_back(){
     player_facing->setPixmap(*back);
 }
