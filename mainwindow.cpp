@@ -14,6 +14,7 @@ MainWindow::MainWindow(QWidget *parent) :
     Wall->setPixmap(*wall);
     Wall->setScaledContents(true);
     Wall->setGeometry(0,0,50,50);
+    Wall->setGeometry(100,50,100,50);
     //Pixmap Pathes
     front = new QPixmap(":/res/main_character(front).png");
     back = new QPixmap(":/res/main_character(back).png");
@@ -21,16 +22,14 @@ MainWindow::MainWindow(QWidget *parent) :
     right = new QPixmap(":/res/main_character(right).png");
     //Character Object
     player_facing = new QLabel(this);
-    player_facing->setGeometry(50,50,50,50);
+    player_facing->setGeometry(51,51,49,49);
     player_facing->setPixmap(*front);
     player_facing->setScaledContents(true);
-
-
 
 }
 void MainWindow::paintEvent(QPaintEvent *event){
     QPainter painter(this);
-    for(int i = 51 ; i < 500 ; i = i + 50){
+    for(int i = 50 ; i < 500 ; i = i + 50){
         painter.drawLine(i , 0 , i , 500);
         painter.drawLine(0 , i , 500 , i);
     }
