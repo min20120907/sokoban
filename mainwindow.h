@@ -6,8 +6,9 @@
 #include <QKeyEvent>
 #include <QPixmap>
 #include <QObject>
-
-
+#include <QPainter>
+#include <QRectF>
+#include <QPainter>
 namespace Ui {
     class MainWindow;
     class player;
@@ -22,8 +23,10 @@ public:
     void character_turn_front();
     void character_turn_left();
     void character_turn_right();
+    void drawBackground(QPainter *painter, const QRectF &rect);
     ~MainWindow();
-
+protected:
+    void paintEvent(QPaintEvent *event);
 private:
     Ui::MainWindow *ui;
     QLabel *Wall;

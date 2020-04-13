@@ -7,7 +7,9 @@ class level_1 : public QObject
     Q_OBJECT
 public:
     explicit level_1(QObject *parent = nullptr);
-
+    struct array {short int map[9][9];};
+    array arr;
+    static array const arrdata;
 signals:
 
 public slots:
