@@ -6,5 +6,6 @@ int main(int argc, char *argv[])
     MainWindow w;
     w.show();
     w.setFixedSize(507,507);
+
     return a.exec();
 }

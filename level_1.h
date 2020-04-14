@@ -10,9 +10,9 @@ class level_1 : public QObject
 public:
     explicit level_1(QObject *parent = nullptr);
     struct array {short int map[10][10];};
-    array arr;
-    static array const arrdata;
+    array arrdata;
     void map_gen();
+
     QPixmap** ground;
     QPixmap** wall;
     QPixmap** target;

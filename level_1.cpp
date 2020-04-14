@@ -1,11 +1,12 @@
 #include "level_1.h"
 
-//level_1::level_1(QObject *parent) : QObject(parent)
-//{
+level_1::level_1(QObject *parent) : QObject(parent)
+{
 
-//}
+map_gen();
+}
 
-level_1::array arrdata = {{
+static level_1::array arrdata = {{
 {0 , 2 , 2 , 2 , 2 , 0 , 0 , 0 , 0 , 0},
 {0 , 2 , 1 , 1 , 2 , 2 , 2 , 2 , 2 , 0},
 {0 , 2 , 4 , 1 , 1 , 1 , 4 , 1 , 2 , 0},
@@ -22,14 +23,11 @@ void level_1::map_gen(){
     int idx_target = 0;
     int idx_box = 0;
     int idx_player = 0;
-    if(sizeof(arrdata.map)/sizeof(arrdata.map[0])!=10||sizeof(arrdata.map[0])/sizeof(int)!=10){
-        QMessageBox msgBox;
-        msgBox.setText("Invalid Map.");
-        msgBox.exec();
-    }
+
     for(int x = 0; x<10;x++){
         for(int y =0;y<10;y++){
-            switch(arrdata.map[x][y]){
+            int a = arrdata.map[x][y];
+            switch(a){
                 case 1:
                     ground[idx_ground] = new QPixmap(":/res/stone_ground.jpg");
                     Ground[idx_ground] = new QLabel();

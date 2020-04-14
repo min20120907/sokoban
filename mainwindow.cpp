@@ -25,7 +25,8 @@ MainWindow::MainWindow(QWidget *parent) :
     player_facing->setGeometry(51,51,49,49);
     player_facing->setPixmap(*front);
     player_facing->setScaledContents(true);
-
+    level_1* a = new level_1(this);
+    a->map_gen();
 }
 void MainWindow::paintEvent(QPaintEvent *event){
     QPainter painter(this);
